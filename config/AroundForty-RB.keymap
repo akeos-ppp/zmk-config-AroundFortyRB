@@ -12,7 +12,64 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        tab {
+            bindings = <&kp DOLLAR>;
+            key-positions = <11 12>;
+        };
+
+        shift_tab {
+            bindings = <&kp LS(LEFT_PARENTHESIS)>;
+            key-positions = <12 13>;
+        };
+
+        muhennkann {
+            bindings = <&to_layer_0 INT_MUHENKAN>;
+            key-positions = <11 10>;
+        };
+
+        double_quotation {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <20 21>;
+        };
+
+        eq {
+            bindings = <&kp EQUAL>;
+            key-positions = <24 25>;
+        };
+
+        l {
+            bindings = <&kp RPAR>;
+            key-positions = <13 14>;
+        };
+
+        L_disp {
+            bindings = <&kp LA(LC(D))>;
+            key-positions = <34 35>;
+        };
+
+        c_disp {
+            bindings = <&kp LC(LA(F))>;
+            key-positions = <35 36>;
+        };
+
+        r_disp {
+            bindings = <&kp LA(LC(G))>;
+            key-positions = <36 37>;
+        };
+
+        full_disp {
+            bindings = <&kp LA(LC(ENTER))>;
+            key-positions = <37 38>;
+        };
+
+        reset {
+            bindings = <&bootloader>;
+            key-positions = <5 6 7 8 4 3 2 1>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -21,7 +78,72 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        mission: mission {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LC(UP)>;
+
+            label = "MISSION";
+        };
+
+        launchpad: launchpad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LG(LA(L))>;
+
+            label = "LAUNCHPAD";
+        };
+
+        capture: capture {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LG(LS(N5))>;
+
+            label = "CAPTURE";
+        };
+
+        left: left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LA(LC(D))>;
+
+            label = "LEFT";
+        };
+
+        center: center {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LA(LC(F))>;
+
+            label = "CENTER";
+        };
+
+        right: right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LA(LC(G))>;
+
+            label = "RIGHT";
+        };
+
+        left_two: left_two {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LA(LC(E))>;
+
+            label = "LEFT_TWO";
+        };
+
+        right_two: right_two {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LA(LC(T))>;
+
+            label = "RIGHT_TWO";
+        };
     };
+
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
