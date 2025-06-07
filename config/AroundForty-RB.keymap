@@ -171,8 +171,19 @@
 &kp Q             &kp W         &kp E             &kp R          &kp T                          &kp Y        &kp U       &kp I                     &kp O                &kp P
 &kp A             &kp S         &kp D             &kp F          &kp G                          &kp H        &kp J       &kp K                     &kp L                &kp MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V          &kp B        &kp ESC           &kp N        &kp M       &kp COMMA                 &kp PERIOD           &mt RIGHT_SHIFT SLASH
-&kp TAB           &kp LEFT_ALT  &kp LEFT_CONTROL  &kp BACKSPACE  &lt 2 SPACE  &lt 4 LANGUAGE_1  &lt 1 ENTER  &lt 7 SEMI  &mt RIGHT_GUI LANGUAGE_2  &lt 3 DOUBLE_QUOTES  &kp EQUAL
+&kp TAB           &kp LEFT_ALT  &kp LEFT_CONTROL  &kp BACKSPACE  &lt 3 SPACE  &lt 1 LANGUAGE_1  &lt 2 ENTER  &lt 0 SEMI  &mt RIGHT_GUI LANGUAGE_2  &lt 6 DOUBLE_QUOTES  &kp EQUAL
             >;
+        };
+
+        LAYER_1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans          &kp LESS_THAN         &kp GREATER_THAN       &kp CARET        &kp PERCENT    &kp DOLLAR
+&trans  &trans  &trans  &trans  &trans          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN      &kp AMPERSAND  &kp DOUBLE_QUOTES
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EXCLAMATION  &kp QUESTION   &kp SQT
+&trans  &trans  &trans  &trans  &trans  &trans  &kp ENTER             &kp COLON              &kp BACKSPACE    &kp BACKSLASH  &kp HASH
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
 
         NUM {
@@ -198,7 +209,7 @@
         MOUSE {
             bindings = <
 &studio_unlock  &trans  &trans  &trans  &trans          &trans  &trans    &mkp MB3    &trans    &trans
-&trans          &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mo 4       &mkp MB2  &trans
+&trans          &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mo 1       &mkp MB2  &trans
 &trans          &trans  &trans  &trans  &trans  &trans  &trans  &mission  &launchpad  &trans    &trans
 &trans          &trans  &trans  &trans  &trans  &trans  &trans  &capture  &trans      &trans    &trans
             >;
@@ -212,17 +223,6 @@
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            sensor-bindings = <&scroll_up_down>;
-        };
-
-        LAYER_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans          &kp LESS_THAN         &kp GREATER_THAN       &kp CARET        &kp PERCENT    &kp DOLLAR
-&trans  &trans  &trans  &trans  &trans          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN      &kp AMPERSAND  &kp DOUBLE_QUOTES
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EXCLAMATION  &kp QUESTION   &kp SQT
-&trans  &trans  &trans  &trans  &trans  &trans  &kp ENTER             &kp COLON              &kp BACKSPACE    &kp BACKSLASH  &kp HASH
             >;
 
             sensor-bindings = <&scroll_up_down>;
