@@ -28,6 +28,27 @@
             bindings = <&kp LC(UP_ARROW)>;
             label = "MISSION";
         };
+
+        launchpad: launchpad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LG(L))>;
+            label = "LAUNCHPAD";
+        };
+
+        capture: capture {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(N5))>;
+            label = "CAPTURE";
+        };
+
+        left: left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(D))>;
+            label = "LEFT";
+        };
     };
 
     behaviors {
