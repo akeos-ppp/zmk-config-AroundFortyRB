@@ -49,6 +49,34 @@
             bindings = <&kp LA(LC(D))>;
             label = "LEFT";
         };
+
+        center: center {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(F))>;
+            label = "CENTER";
+        };
+
+        right: right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(G))>;
+            label = "RIGHT";
+        };
+
+        left_two: left_two {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(E))>;
+            label = "LEFT_TWO";
+        };
+
+        right_two: right_two {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(T))>;
+            label = "RIGHT_TWO";
+        };
     };
 
     behaviors {
